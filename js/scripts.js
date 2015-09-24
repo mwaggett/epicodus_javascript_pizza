@@ -15,6 +15,12 @@ Pizza.prototype.price = function() {
   return price;
 }
 
-// $(document).ready(function() {
-//
-// });
+$(document).ready(function() {
+  $("#size").click(function() {
+    var size = $("input[name=size]:checked").val();
+    var pizza = new Pizza(size);
+
+    $("#total").text(pizza.price());
+    $("#price").show();
+  });
+});
