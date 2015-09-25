@@ -1,16 +1,18 @@
-# Application Name
+# Order a Pizza!
 
-##### _{Brief description of application}, {Date of current version}_
+##### _JavaScript OO Code Review for Epicodus, 25 September 2015_
 
 #### By **Molly Waggett**
 
 ## Description
 
-{This is a detailed description of your application. Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. Do you want other developers to use this code in their apps? Talk about things like that here in simple terms.}
+This site allows a user to order pizzas. They may select the size of their pizza and what toppings they would like and the price is calculated accordingly. The user may also add and remove pizzas to/from their order.
 
 ## Setup
 
 * Clone this repository.
+* Open the index.html file in your browser.
+* Go!
 
 ## Technologies Used
 
