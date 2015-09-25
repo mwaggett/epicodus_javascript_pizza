@@ -1,3 +1,7 @@
 #price {
   display: none;
 }
+
+.row {
+  margin: 5px;
+}
