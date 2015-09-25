@@ -1,7 +1,18 @@
+.jumbotron {
+  background-image: url("../img/background-pizza.jpg");
+  background-size: cover;
+  color: black;
+}
+
 #price {
   display: none;
 }
 
 .row {
   margin: 5px;
+}
+
+.modal {
+  text-align: center;
+  opacity: 0.5;
 }

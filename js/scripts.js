@@ -30,6 +30,16 @@ var totalPrice = function() {
 }
 
 $(document).ready(function() {
+  $(document).on("click", "input", function() {
+    $("#total").text(totalPrice());
+    $("#price").show();
+  });
+
+  $(document).on("click", ".remove", function() {
+      $(this).parent().remove();
+      $("#total").text(totalPrice());
+  });
+
   var quantity = 1;
   $("#add").click(function() {
     quantity++;
@@ -54,12 +64,7 @@ $(document).ready(function() {
                       '</div>');
   });
 
-  $(document).on("click", ".remove", function() {
-      $(this).parent().remove();
-  });
-
-  $("#calculate").click(function() {
-    $("#total").text(totalPrice());
-    $("#price").show();
+  $("#submit").click(function() {
+    $('#myModal').modal('show');
   });
 });

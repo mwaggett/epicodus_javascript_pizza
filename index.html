@@ -4,6 +4,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.11.3.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     <title>Pizza</title>
   </head>
@@ -12,6 +13,10 @@
 
       <div class="jumbotron">
         <h1>Order a Pizza!</h1>
+      </div>
+
+      <div class="row">
+        <span class="btn btn-success" id="add">Add another pizza</span>
       </div>
 
       <div class="row col-md-12" id="order">
@@ -37,14 +42,23 @@
       </div>
 
       <div class="row">
-        <span class="btn btn-success" id="add">Add another pizza</span>
-        <span class="btn btn-warning" id="calculate">Calculate Price</span>
-      </div>
-
-      <div class="row">
         <div class="col-md-12" id="price">
           <h3>Price: $<span id="total"></span></h3>
-          <span class="btn btn-warning" id="order">Order Now!</span>
+          <span class="btn btn-warning" id="submit">Order Now!</span>
+        </div>
+      </div>
+
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="http://i.giphy.com/5ESKr27v8mjBe.gif">
+              <h2>Thank you for your order!</h2>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
 
