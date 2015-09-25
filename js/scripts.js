@@ -18,15 +18,27 @@ Pizza.prototype.price = function() {
 var totalPrice = function() {
   var total = 0;
   $.each($(".pizza"), function() {
-    var size = $(this).find("input[type=radio]:checked").val();
-    var pizza = new Pizza(size);
+    if ($(this).find("input[type=radio]:checked").val()) {
+      var size = $(this).find("input[type=radio]:checked").val();
+      var pizza = new Pizza(size);
 
-    $.each($(this).find("input[type=checkbox]:checked"), function() {
-      pizza.addTopping($(this).val());
-    });
-    total += pizza.price();
+      $.each($(this).find("input[type=checkbox]:checked"), function() {
+        pizza.addTopping($(this).val());
+      });
+      total += pizza.price();
+    }
   });
   return total;
+}
+
+var allPizzasHaveSize = function() {
+  var result = true;
+  $.each($(".pizza"), function() {
+    if (!$(this).find("input[type=radio]:checked").val()) {
+      result = false;
+    }
+  });
+  return result;
 }
 
 $(document).ready(function() {
@@ -65,6 +77,10 @@ $(document).ready(function() {
   });
 
   $("#submit").click(function() {
-    $('#myModal').modal('show');
+    if (allPizzasHaveSize()) {
+      $('#myModal').modal('show');
+    } else {
+      alert("Oops! You have not selected a size for one of your pizzas!");
+    }
   });
 });
