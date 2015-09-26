@@ -28,7 +28,11 @@ var totalPrice = function() {
       total += pizza.price();
     }
   });
-  return total;
+  if (total % 1 === 0) {
+    return total + ".00";
+  } else {
+    return total + "0";
+  }
 }
 
 var allPizzasHaveSize = function() {
